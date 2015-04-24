@@ -1,0 +1,37 @@
+c=320:d=240
+repeat 64
+color 0,150,0
+line c,d,cnt,d*2:line c,d,cnt+128,d*2:line c,d,cnt+256,d*2:line c,d,cnt+384,d*2:line c,d,cnt+512,d*2
+loop
+repeat 64
+color 0,135,0
+line c,d,cnt+64,d*2:line c,d,cnt+192,d*2:line c,d,cnt+320,d*2:line c,d,cnt+448,d*2:line c,d,cnt+576,d*2
+loop
+repeat 64
+color 100,100,255
+line c,d,cnt+64,0:line c,d,cnt+192,0:line c,d,cnt+320,0:line c,d,cnt+448,0:line c,d,cnt+576,0
+loop
+repeat 64
+color 100,100,235
+line c,d,cnt,0:line c,d,cnt+128,0:line c,d,cnt+256,0:line c,d,cnt+384,0:line c,d,cnt+512,0
+loop
+color 0,0,0
+line c,d,c*2,d*2
+line c,d,0,d*2
+line c,d,0,0
+line c,d,c*2,0
+color 255,0,0
+repeat 9
+line c,d,0,(cnt+1)*48
+line c,d,640,(cnt+1)*48
+loop
+color 0,0,0
+boxf d,180,400,300
+repeat 6
+n=cnt*30
+m=cnt*40
+color 0,0,255
+line 40+m,30+n,40+m,450-n
+line 600-m,30+n,600-m,450-n
+loop
+
